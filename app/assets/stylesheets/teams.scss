@@ -6,12 +6,13 @@
 .team {
   background-color: black;
   border-radius: 50%;
+  font-family: 'Chewy';
   height: 200px;
   margin: 0 auto;
+  position: static;
   text-align: center;
   vertical-align: middle;
   width: 200px;
-  position: static;
 }
 
 .teams-container{
@@ -22,8 +23,13 @@
 }
 
 .team-name {
-  padding-top: 35%;
   font-size: 42px;
+  padding-top: 35%;
+  text-decoration: none;
+}
+
+.team a {
+  text-decoration: none;
 }
 
 .team:hover {

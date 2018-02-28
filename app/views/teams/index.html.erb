@@ -5,16 +5,14 @@
 </head>
 <body>
 
-  <div class="logo">
-    <img src="https://pbs.twimg.com/profile_images/496447818031058944/GEiJMDAf_400x400.jpeg">
-  </div>
-
   <div class="teams-container">
     <% @teams.each_with_index do |t,i| %>
     <div id=<%=i%> class="team">
-      <div class="team-name">
-        <%= t.teamName %>
-      </div>
+      <%= link_to team_path(t) do%>
+        <div id="link<%=i%>""  class="team-name">
+          <%= t.teamName %>
+        </div>
+      <%end%>
     </div>
     <%end%>
   </div>

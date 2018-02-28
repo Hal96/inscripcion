@@ -1,13 +1,17 @@
 let arrColors = ["#bdbdbd", "#d12020", "#f59126", "#ff85b6", "#56cfcf", "#47962c", "#000000", "#e7e147"];
 let arrLetra = ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff", "#ffffff"];
+
 function hover(team) {
-  team.style.color = arrColors[team.id];
+  let link = document.getElementById("link" + team.id)
+  link.style.color = arrColors[team.id];
+  team.style.borderColor = arrColors[team.id];
   team.style.background = "white";
   team.style.cursor = 'pointer';
 }
 
 function mouseOut(team) {
-  team.style.color = arrLetra[team.id];
+  let link = document.getElementById("link" + team.id)
+  link.style.color = arrLetra[team.id];
   team.style.background = arrColors[team.id];
   team.style.cursor = 'pointer';
 }
@@ -15,8 +19,9 @@ function mouseOut(team) {
 function colorCircles(circles) {
   for (var i = 0; i <  circles; i++) {
     let cir = document.getElementById(i);
+    let link = document.getElementById("link" + i)
     cir.style.background = arrColors[i];
-    cir.style.color = arrLetra[i];
+    link.style.color = arrLetra[i];
     cir.setAttribute('onmouseover', "hover(this)");
     cir.setAttribute('onmouseout', "mouseOut(this)");
   }

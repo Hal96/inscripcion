@@ -6,9 +6,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet'>
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="nav-bar">
+      <div class="link">
+        <%= link_to "REGISTRO", student_index_path %>
+      </div>
+      <div class="link">
+        <%= link_to "EQUIPOS", team_index_path %>
+      </div>
+    </div>
+
+    <div class="logo">
+    <%= link_to image_tag("https://pbs.twimg.com/profile_images/496447818031058944/GEiJMDAf_400x400.jpeg"), student_index_path%>
+    </div>
+
+    <div class="body">
+      <%= yield %>
+    </div>
+
   </body>
 </html>
