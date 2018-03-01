@@ -1,4 +1,4 @@
-let arrColors = ["#bdbdbd", "#d12020", "#f59126", "#ff85b6", "#56cfcf", "#47962c", "#000000", "#e7e147"];
+let arrColors = ["#cecece", "#d12020", "#f59126", "#ff85b6", "#56cfcf", "#47962c", "#000000", "#e7e147"];
 
 function hover(team) {
   let link = document.getElementById("link" + team.id)
@@ -24,4 +24,9 @@ function colorCircles(circles) {
     cir.setAttribute('onmouseover', "hover(this)");
     cir.setAttribute('onmouseout', "mouseOut(this)");
   }
+}
+
+function colorInfo(id) {
+  let cir = document.getElementById("info");
+  cir.style.color = arrColors[id - 1]
 }
