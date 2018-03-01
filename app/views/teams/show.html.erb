@@ -5,7 +5,28 @@
 </head>
 <body>
 
-  
+  <div class="team-show-container">
+    
+    <div id="info" class="team-info">
+      <h2> Equipo </h2>
+      <%=@team.teamName%>
+    </div>
+
+  </div>
+
+  <div class="members">
+    <% @members.each do |m| %>
+      <div>
+        <%= m.name %>
+        <%= m.student_id %>
+      </div>
+    <%end%>
+  </div>
 
 </body>
+
+<script type="text/javascript">
+  colorInfo(<%= @team.id %>);
+</script>
+
 </html>
