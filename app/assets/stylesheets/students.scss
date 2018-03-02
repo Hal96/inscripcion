@@ -18,6 +18,17 @@ body {
   width: 250px;
 }
 
+.student-table {
+  width: 99%;
+}
+
+.students-header {
+  background-color: #004568;
+  color: white;
+  font-family: 'Acme';
+  font-size: 32px;
+}
+
 .register {
   border-color: white;
   border-width: 2px;
@@ -39,4 +50,20 @@ body {
 .student-container {
   display: grid;
   grid-template-columns: 1fr;
+}
+
+.student-rows {
+  color: white;
+  font-family: 'Acme';
+  font-size: 28px;
+  height: 32px;
+  text-align: center;
+}
+
+.student-rows:nth-child(even){
+  background-color: #f4b496;
+}
+
+.student-rows:nth-child(odd){
+  background-color: #7cc164;
 }

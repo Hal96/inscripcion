@@ -2,6 +2,7 @@
   <html>
   <head>
     <title>Hi Tec</title>
+    <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
   </head>
   <body>
 
@@ -21,24 +22,32 @@
       </div>
 
       <div class="student-container">
-        <div class="student">
+        
+        <% if @students.count == 0 %>
+          
+          <div class="message">
+            <h1>¡Todos los estudiantes han sido asignados a un equipo! </h1>
+          </div>
+          
+        <% else %>
 
-          <table>
-            <tr>
+          <table class="student-table">
+            <tr class="students-header">
               <th>Nombre</th>
               <th>Matricula</th>
+              <th>Equipo</th>
             </tr>
             <% @students.each do |student| %>
-              <tr>
-                <td> <%= student.name %> </td>
-                <td> <%= student.student_id %> </td>  
+              <tr class="student-rows">
+                <td class="row-element"> <%= student.name %> </td>
+                <td class="row-element"> <%= student.student_id %> </td> 
+                <td class="row-element"> <%= student.team.teamName %> </td>   
               </tr>
             <% end %>
           </table>
-          <ul>
-            
-          </ul>
-        </div>
+
+        <% end %>
+
       </div>
 
     </div>
