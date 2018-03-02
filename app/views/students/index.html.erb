@@ -1,32 +1,47 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hi Tec</title>
-</head>
-<body>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Hi Tec</title>
+  </head>
+  <body>
 
-  <div class="container">
-    
-    <div class="register">
-      <h1>Registra un alumno que no está en la lista</h1>
-        <form>
-          <p>
-            <h3>Matrícula</h3>
-            <input type="text" name="firstname">
-            <h3>Nombre</h3>
-            <input type="text" name="lastname">
-          </p>
-          <input type="submit" value="Registrar" class="register-student">
-      </form>
-    </div>
-
-    <div class="student-container">
-      <div class="student">
-        
+    <div class="container">
+      
+      <div class="register">
+        <h1>Registra un alumno que no está en la lista</h1>
+          <form>
+            <p>
+              <h3>Matrícula</h3>
+              <input type="text" name="firstname">
+              <h3>Nombre</h3>
+              <input type="text" name="lastname">
+            </p>
+            <input type="submit" value="Registrar" class="register-student">
+        </form>
       </div>
+
+      <div class="student-container">
+        <div class="student">
+
+          <table>
+            <tr>
+              <th>Nombre</th>
+              <th>Matricula</th>
+            </tr>
+            <% @students.each do |student| %>
+              <tr>
+                <td> <%= student.name %> </td>
+                <td> <%= student.student_id %> </td>  
+              </tr>
+            <% end %>
+          </table>
+          <ul>
+            
+          </ul>
+        </div>
+      </div>
+
     </div>
 
-  </div>
-
-</body>
-</html>
+  </body>
+  </html>
