@@ -1,6 +1,57 @@
+.button-delete {
+  background-color: inherit;
+  border: none;
+  color: white;
+  font-family: 'Acme';
+  font-size: 27px;
+  height: 42px;
+  width: 102px;
+}
+
+.button-delete:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.column-delete {
+  width: 100px;
+}
+
 .logo img {
   height: 250px;
   width: 250px;
+}
+
+.members {
+  margin-top: 25px;
+  width: 99%;
+}
+
+.members-header {
+  font-family: 'Acme';
+  font-size: 32px;
+}
+
+.message {
+  font-family: 'Acme';
+  font-size: 32px;
+  text-align: center;
+}
+
+.student-row {
+  color: white;
+  font-family: 'Acme';
+  font-size: 28px;
+  height: 32px;
+  text-align: center;
+}
+
+.student-row:nth-child(even){
+  background-color: #f4b496;
+}
+
+.student-row:nth-child(odd){
+  background-color: #7cc164;
 }
 
 .team {
@@ -29,13 +80,13 @@
 }
 
 .team-info {
-  border-color: #004568;
   border-radius: 10%;
-  border-style: solid;
+  border-bottom-color: #004568;
+  border-bottom-style: solid;
   border-width: 3px;
   font-family: 'Chewy';
   font-size: 26px;
-  height: 200px;
+  height: 100px;
   margin: 0 auto;
   width: 200px;
 }
@@ -63,4 +114,8 @@
   margin-top: 10px;
   transition: 0.3s;
   width: 172px;
+}
+
+th, td {
+  padding: 10px;
 }
