@@ -2,6 +2,8 @@
 <html>
 <head>
   <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+  <!--{ :controller => "teams", :action => "update_student", :id => m.id}-->
 </head>
 <body>
 
@@ -14,13 +16,36 @@
 
   </div>
 
-  <div class="members">
-    <% @members.each do |m| %>
+  <div class="table-header">
+    
+    <% if @team.students.count == 0 %>
+    
+    <div class="message">
+      <h1>¡El equipo <%=@team.teamName%> no tiene estudiantes aún! </h1>
+    </div>
+    
+    <% else %>
+    
+      <table class="members">
+      <tr class="members-header">
+        <th>Nombre</th>
+        <th>Matrícula</th>
+      </tr>
       <div>
-        <%= m.name %>
-        <%= m.student_id %>
+        <% @members.each do |m| %>
+          <tr class="student-row">
+            <td class="row-element"><%= m.name %></td>
+            <td class="row-element"><%= m.student_id %></td>
+            <td class="column-delete">
+            <%= button_to "Eliminar", {}, class: 'button-delete' %>    
+            </td>
+          </tr>
+        <%end%>
       </div>
-    <%end%>
+    </table>
+
+    <% end %>
+
   </div>
 
 </body>
