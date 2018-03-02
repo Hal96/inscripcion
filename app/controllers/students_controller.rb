@@ -1,6 +1,7 @@
 class StudentsController < ApplicationController
   def index
-    @students = Student.all
+    @team = Team.find_by(teamName: "Sin Asignar")
+    @students = Student.where("team_id = ?", @team)
   end
 
 end
