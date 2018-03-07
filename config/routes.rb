@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'team/index' => 'teams#index'
   get 'team/:id' => 'teams#show', as: :team
   root 'students#index'
+  resources :students
 end

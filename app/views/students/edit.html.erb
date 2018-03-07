@@ -1,0 +1,12 @@
+<%=form_for(@student, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  <%=f.label :name %>:
+  <br>
+  <%=f.text_field :name %>
+  <br>
+  <%=f.label :Team %>
+  <br>
+  <%=f.text_field :team_id, autofocus: true %>
+  <br>
+  <%= f.submit class: "btn btn-primary btn-lg" %>
+<%end%>
+

@@ -36,13 +36,16 @@
               <th>Nombre</th>
               <th>Matricula</th>
               <th>Equipo</th>
+              <th> Register</th>
             </tr>
             <% @students.each do |student| %>
               <tr class="student-rows">
                 <td class="row-element"> <%= student.name %> </td>
                 <td class="row-element"> <%= student.student_id %> </td> 
-                <td class="row-element"> <%= student.team.teamName %> </td>   
+                <td class="row-element"> <%= student.team.teamName %> </td> 
+                <td><%= link_to "Register",edit_student_path(student), class: "btn btn-primary" %></td>  
               </tr>
+
             <% end %>
           </table>
 
